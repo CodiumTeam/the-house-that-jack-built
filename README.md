@@ -1,4 +1,4 @@
-Kata to practice object oriented programming.
+Kata to practice object-oriented programming.
 
 This is a reduced version of the song, with only 5 verses.
 
@@ -25,7 +25,7 @@ Create a program that returns the list of verse with a part of The House That Ja
             the malt that lay in 
             the house that Jack built.
            
-## Iteration 2: Reverse House
+## Iteration 2: Reverse Song
 Create a program that returns the list of verse with a part in reverse order of The House That Jack Built song.
 
     This is the dog that worried.
@@ -48,7 +48,7 @@ Create a program that returns the list of verse with a part in reverse order of 
             the cat that killed 
             the dog that worried.            
 
-## Iteration 3: Echo House
+## Iteration 3: Echo Song
 Create a program that returns the list of verse with echo of a part of The House That Jack Built song.
 
     This is the house that Jack built 
@@ -87,7 +87,7 @@ Create a program that returns the list of verse with echo of a part of The House
             the house that Jack built.
 
 
-## Iteration 4: Reverse Echo House
+## Iteration 4: Reverse Echo Song
 Create a program that returns the list of verse with echo of a part of The House That Jack Built song.
 
     This is the dog that worried 
