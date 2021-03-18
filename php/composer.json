@@ -1,0 +1,21 @@
+{
+    "name": "codium/the-house-that-jack-built",
+    "require": {
+        "php": "^7.3|^7.4|^8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "authors": [
+        {
+            "name": "Luis Rovirosa",
+            "email": "luis@codium.team"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TheHouseThatJackBuilt\\": "src",
+            "TheHouseThatJackBuilt\\Test\\": "tests"
+        }
+    }
+}
