@@ -34,8 +34,8 @@ class KataTest(unittest.TestCase):
 
         self.assertEqual(expected_verses, verses[4])
 
-    # def test_reverse_song_generates_first_verse(self):
-    #     expected_verses = "This is the dog that worried."
-    #     verses = TheHouseThatJackBuiltSong().generate_song(song_type='reverse')
-    #
-    #     self.assertEqual(expected_verses, verses[0])
+    def test_reverse_song_generates_first_verse(self):
+        expected_verses = "This is the dog that worried."
+        verses = TheHouseThatJackBuiltSong().generate_song(song_type='reverse')
+
+        self.assertEqual(expected_verses, verses[0])

@@ -8,13 +8,23 @@ class TheHouseThatJackBuiltSong:
         third = "the rat that ate"
         fourth = "the cat that killed"
         fifth = "the dog that worried"
-        verses = [
-            cls._generate_verse([first]),
-            cls._generate_verse([second, first]),
-            cls._generate_verse([third, second, first]),
-            cls._generate_verse([fourth, third, second, first]),
-            cls._generate_verse([fifth, fourth, third, second, first])
-        ]
+
+        if song_type == 'regular':
+            verses = [
+                cls._generate_verse([first]),
+                cls._generate_verse([second, first]),
+                cls._generate_verse([third, second, first]),
+                cls._generate_verse([fourth, third, second, first]),
+                cls._generate_verse([fifth, fourth, third, second, first])
+            ]
+        else:
+            verses = [
+                cls._generate_verse([fifth]),
+                cls._generate_verse([fourth, fifth]),
+                cls._generate_verse([third, fourth, fifth]),
+                cls._generate_verse([second, third, second, fifth]),
+                cls._generate_verse([first, fourth, third, fourth, fifth])
+            ]
         return verses
 
 
