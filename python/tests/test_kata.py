@@ -9,3 +9,9 @@ class KataTest(unittest.TestCase):
         verses = TheHouseThatJackBuiltSong().generate_song()
 
         self.assertEqual("This is the house that Jack built.", verses[0])
+
+    def test_regular_song_generates_second_verse(self):
+        expected_verses = "This is the malt that lay in the house that Jack built."
+        verses = TheHouseThatJackBuiltSong().generate_song()
+
+        self.assertEqual(expected_verses, verses[1])
