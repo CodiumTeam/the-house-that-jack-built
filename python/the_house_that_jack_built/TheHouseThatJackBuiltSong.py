@@ -3,28 +3,24 @@
 class TheHouseThatJackBuiltSong:
     @classmethod
     def generate_song(cls, song_type: str):
-        first = "the house that Jack built"
-        second = "the malt that lay in"
-        third = "the rat that ate"
-        fourth = "the cat that killed"
-        fifth = "the dog that worried"
+        blocks = [
+            "the house that Jack built",
+            "the malt that lay in",
+            "the rat that ate",
+            "the cat that killed",
+            "the dog that worried"
+        ]
 
-        if song_type == 'regular':
-            verses = [
-                cls._generate_verse([first]),
-                cls._generate_verse([second, first]),
-                cls._generate_verse([third, second, first]),
-                cls._generate_verse([fourth, third, second, first]),
-                cls._generate_verse([fifth, fourth, third, second, first])
-            ]
-        else:
-            verses = [
-                cls._generate_verse([fifth]),
-                cls._generate_verse([fourth, fifth]),
-                cls._generate_verse([third, fourth, fifth]),
-                cls._generate_verse([second, third, second, fifth]),
-                cls._generate_verse([first, fourth, third, fourth, fifth])
-            ]
+        if song_type == 'reverse':
+            blocks.reverse()
+
+        verses = [
+            cls._generate_verse([blocks[0]]),
+            cls._generate_verse([blocks[1], blocks[0]]),
+            cls._generate_verse([blocks[2], blocks[1], blocks[0]]),
+            cls._generate_verse([blocks[3], blocks[2], blocks[1], blocks[0]]),
+            cls._generate_verse([blocks[4], blocks[3], blocks[2], blocks[1], blocks[0]])
+        ]
         return verses
 
 
