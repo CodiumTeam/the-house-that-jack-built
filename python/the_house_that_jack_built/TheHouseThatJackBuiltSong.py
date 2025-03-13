@@ -6,10 +6,12 @@ class TheHouseThatJackBuiltSong:
         first = "the house that Jack built"
         second = "the malt that lay in"
         third = "the rat that ate"
+        fourth = "the cat that killed"
         verses = [
             cls._generate_verse([first]),
             cls._generate_verse([second, first]),
-            cls._generate_verse([third, second, first])
+            cls._generate_verse([third, second, first]),
+            cls._generate_verse([fourth, third, second, first])
         ]
         return verses
 
