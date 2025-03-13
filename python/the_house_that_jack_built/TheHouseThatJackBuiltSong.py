@@ -14,19 +14,14 @@ class TheHouseThatJackBuiltSong:
         if song_type == 'reverse':
             blocks.reverse()
 
-        verses = [
-            cls._generate_verse(blocks, 1),
-            cls._generate_verse(blocks, 2),
-            cls._generate_verse(blocks, 3),
-            cls._generate_verse(blocks, 4),
-            cls._generate_verse(blocks, 5)
-        ]
+        verses = [cls._generate_verse(blocks, i) for i in range(1, len(blocks) + 1)]
+
         return verses
 
 
     @classmethod
     def _generate_verse(cls, blocks: list[str], verse_number):
-        verse = ["This is"]
-        for block in range(verse_number - 1, -1, -1):
-            verse.append(blocks[block])
-        return ' '.join(verse) + '.'
+        verse = []
+        for index in range(verse_number):
+            verse.insert(0, blocks[index])
+        return "This is " + ' '.join(verse) + '.'
