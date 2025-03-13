@@ -27,3 +27,9 @@ class KataTest(unittest.TestCase):
         verses = TheHouseThatJackBuiltSong().generate_song()
 
         self.assertEqual(expected_verses, verses[3])
+
+    def test_regular_song_generates_fifth_verse(self):
+        expected_verses = "This is the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built."
+        verses = TheHouseThatJackBuiltSong().generate_song()
+
+        self.assertEqual(expected_verses, verses[4])
