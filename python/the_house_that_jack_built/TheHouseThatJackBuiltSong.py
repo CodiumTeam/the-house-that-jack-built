@@ -3,9 +3,20 @@
 class TheHouseThatJackBuiltSong:
     @classmethod
     def generate_song(cls):
+        first = "the house that Jack built"
+        second = "the malt that lay in"
+        third = "the rat that ate"
         verses = [
-            "This is the house that Jack built.",
-            "This is the malt that lay in the house that Jack built.",
-            "This is the rat that ate the malt that lay in the house that Jack built."
+            cls._generate_verse([first]),
+            cls._generate_verse([second, first]),
+            cls._generate_verse([third, second, first])
         ]
         return verses
+
+
+    @classmethod
+    def _generate_verse(cls, verse_block: list[str]):
+        verse = ["This is"]
+        for block in verse_block:
+            verse.append(block)
+        return ' '.join(verse) + '.'
