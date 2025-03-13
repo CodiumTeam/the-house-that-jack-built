@@ -2,7 +2,7 @@
 
 class TheHouseThatJackBuiltSong:
     @classmethod
-    def generate_song(cls):
+    def generate_song(cls, song_type: str):
         first = "the house that Jack built"
         second = "the malt that lay in"
         third = "the rat that ate"
